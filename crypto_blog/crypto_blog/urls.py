@@ -1,13 +1,7 @@
 from django.conf.urls import url
 from django.contrib import admin
 
-from django.http.response import HttpResponse
-
-def home(request):
-    return HttpResponse("Hello world")
-
-def room(request, room_id):
-    return HttpResponse("room number : " + room_id)
+from crypto_blog.controller import home, room # 함수들을 불러옴
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
