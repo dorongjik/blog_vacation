@@ -1,16 +1,14 @@
 from django.http.response import HttpResponse
 from django.conf import settings
 from django.template import loader
+from django.shortcuts import render
 
 import requests
 
 def home(request):
-    template = loader.get_template("home.html")
-    return HttpResponse(
-        template.render(
-            {"site_name" : "대박 투자"},
-            request,
-        )
+    return render(request,
+        "home.html",
+        { "site_name":"대박 투자" }, 
     )
 
 def room(request, room_id):
