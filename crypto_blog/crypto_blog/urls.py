@@ -1,7 +1,7 @@
 from django.conf.urls import url
 from django.contrib import admin
 
-from crypto_blog.views import home, room # 함수들을 불러옴.
+from crypto_blog.views import * # 함수들을 불러옴.
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
